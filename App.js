@@ -12,8 +12,13 @@ export default function App() {
       <Text style={styles.title}>20 caracteres</Text>
 
       <View style={styles.area}>
-        <Slider 
-        
+        <Slider
+          style={{ height: 50 }}
+          minimumValue={6}
+          maximumValue={20}
+          maximumTrackTintColor='#ff0000'
+          minimumTrackTintColor='#000'
+          thumbTintColor='#392de9'  //Cor da bolinha
         />
       </View>
 
@@ -32,6 +37,11 @@ const styles = StyleSheet.create({
     marginBottom: 60
   },
   area: {
-
+    marginTop: 14,
+    marginBottom: 14,
+    width: "80%", //Aqui pega 80% da tela que ele conseguir, o traço do slider
+    backgroundColor: "#FFF",
+    borderRadius: 8,
+    padding: 6
   }
 });
